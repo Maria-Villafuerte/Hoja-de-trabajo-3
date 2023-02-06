@@ -20,6 +20,8 @@ public class UI {
     static Converter convertor = new Converter();
 
     // Sorts
+    static MergeSort merge = new MergeSort();
+    static Radix radix = new Radix();
     static QuickSort quickSort = new QuickSort();
     static SelectionSort selectionSort = new SelectionSort();
 
@@ -58,7 +60,6 @@ public class UI {
             case 1:
 
                 GnomeSort.gnomeSort(ArrayForSorts, n);
-
                 System.out.print("\nNúmeros ordenardos tras usar Gnome sort: ");
                 System.out.println(Arrays.toString(ArrayForSorts));
                 System.out.println("\n");
@@ -66,7 +67,11 @@ public class UI {
                 break;
 
             case 2:
-
+                merge.merge(ArrayForSorts, op, type, n);
+                merge.sort(ArrayForSorts, 0, ArrayForSorts.length - 1);
+                System.out.println("\nSorted array");
+                System.out.print("\nNúmeros ordenardos tras usar Merge sort: ");
+                merge.printArray(ArrayForSorts);
                 break;
 
             case 3:
@@ -80,7 +85,10 @@ public class UI {
                 break;
 
             case 4:
-
+                radix.radixsort(ArrayForSorts, n);
+                System.out.print("\nNúmeros ordenardos tras usar Radix sort: ");
+                radix.print(ArrayForSorts, n);
+                System.out.println("\n");
                 break;
 
             case 5:
