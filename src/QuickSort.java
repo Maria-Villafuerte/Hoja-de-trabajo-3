@@ -73,7 +73,6 @@ class QuickSort {
 			quickSort(arr, pi + 1, high);
 		}
 	}
-
 	/**
      * Método que imprime el Array ordenado 
 	 * @param arr Array de ints sacados del txt 
